@@ -13,8 +13,9 @@ function getComputerChoice() {
 
 };
 
-function getPlayerChoice()) {
-
+function getPlayerChoice() {
+    
+    return prompt("Rock, paper or scisors ?").toLowerCase ;
 };
 
 function checkWinner(computerChoice, playerChoice) {
