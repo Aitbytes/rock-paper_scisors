@@ -39,9 +39,10 @@ function playGame() {
     console.log("you are going to play 5 rounds against the computer");
     let computerScore = 0;
     let playerScore = 0;
-    for (let n=1; n <= 5; n++) {
 
-        const gameResult = checkWinner(getComputerChoice, getPlayerChoice);
+    for (let n=0; n < 5; n++) {
+
+        const gameResult = checkWinner(getComputerChoice(), getPlayerChoice());
         console.log(gameResult.text);
         if (gameResult.winner === "computer") {
             computerScore++;
