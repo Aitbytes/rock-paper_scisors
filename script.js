@@ -25,12 +25,37 @@ function getPlayerChoice() {
 
 function checkWinner(computerChoice, playerChoice) {
     if (((computerChoice === "rock") && (playerChoice === "scisors")) || ((computerChoice === "paper") && (playerChoice === "rock")) || ((computerChoice === "scisors") && (playerChoice === "paper"))) {
-        return ("Computer wins , " + computerChoice + " beats " + playerChoice);
+        winner = "computer";
+        return {text : ("Computer wins , " + computerChoice + " beats " + playerChoice), winner : "computer"};
     } else {
-        return ("Player wins , " + playerChoice + " beats " + computerChoice);
+        return {text : ("Player wins , " + playerChoice + " beats " + computerChoice), winner : "player"};
     }
 };
 
 function playGame() {
+    console.log("you are going to play 5 rounds against the computer");
+    let computerScore = 0;
+    let playerScore = 0;
+    for (let n=1; n <= 5; n++) {
+
+        const gameResult = checkWinner(getComputerChoice, getPlayerChoice);
+        console.log(gameResult.text);
+        if (gameResult.winner === "computer") {
+            computerScore++;
+        } else {
+            playerScore++;
+        }
+        console.log("Computer's score : " + computerScore + "; Player's score : " + playerScore);
+    }
+
+    console.log("game finished");
+
+    if (computerScore > playerScore) {
+        console.log("computer wins");
+
+    }else if (computerScore < playerScore) {
+        console.log("player wins");
+    }
+    
 
 };
