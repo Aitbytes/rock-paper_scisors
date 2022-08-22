@@ -24,7 +24,11 @@ function getPlayerChoice() {
 };
 
 function checkWinner(computerChoice, playerChoice) {
-
+    if (((computerChoice === "rock") && (playerChoice === "scisors")) || ((computerChoice === "paper") && (playerChoice === "rock")) || ((computerChoice === "scisors") && (playerChoice === "paper"))) {
+        return ("Computer wins , " + computerChoice + " beats " + playerChoice);
+    } else {
+        return ("Player wins , " + playerChoice + " beats " + computerChoice);
+    }
 };
 
 function playGame() {
