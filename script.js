@@ -59,6 +59,8 @@ function playGame() {
 
     }else if (computerScore < playerScore) {
         console.log("player wins");
+    } else {
+        console.log("it's a draw, feel free to play another game");
     }
 
 
