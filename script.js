@@ -14,8 +14,9 @@ function getComputerChoice() {
 };
 
 function getPlayerChoice() {
-    const choice = prompt("Rock, paper or scisors ?").toLowerCase;
-    if ((choice != "rock") || (choice != "paper") || (choice != "scisors")) {
+    let choice = prompt("Rock, paper or scisors ?");
+    choice = choice.toLowerCase();
+    if ( !(choice === "rock") && !(choice === "paper") && !(choice === "scisors")) {
         alert("please write one of the following: rock, paper, scisors");
         return getPlayerChoice();
     } else {
