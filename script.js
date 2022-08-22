@@ -27,6 +27,8 @@ function checkWinner(computerChoice, playerChoice) {
     if (((computerChoice === "rock") && (playerChoice === "scisors")) || ((computerChoice === "paper") && (playerChoice === "rock")) || ((computerChoice === "scisors") && (playerChoice === "paper"))) {
         winner = "computer";
         return {text : ("Computer wins , " + computerChoice + " beats " + playerChoice), winner : "computer"};
+    } else if (computerChoice === playerChoice) {
+        return {text : ("it's a draw") , winner: "draw"};
     } else {
         return {text : ("Player wins , " + playerChoice + " beats " + computerChoice), winner : "player"};
     }
@@ -42,7 +44,7 @@ function playGame() {
         console.log(gameResult.text);
         if (gameResult.winner === "computer") {
             computerScore++;
-        } else {
+        } else if (gameResult.winner !== "draw") {
             playerScore++;
         }
         console.log("Computer's score : " + computerScore + "; Player's score : " + playerScore);
@@ -56,6 +58,6 @@ function playGame() {
     }else if (computerScore < playerScore) {
         console.log("player wins");
     }
-    
+
 
 };
