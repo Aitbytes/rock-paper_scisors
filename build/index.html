@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="bg-gradient-to-tr from-white to-blue-300  h-screen flex items-center justify-center">
+        
+        <div class="border-2 border-purple-300 shadow-2xl  bg-purple-500 p-0 w-3/4 h-fit rounded-2xl flex-col justify-center ">
+            <div id="prompt" class="m-5 shadow-lg rounded-md h-10 w-fit ml-auto mr-auto text-center p-2 bg-purple-300 font-mono" >...</div>
+            <div class="p-5 flex justify-evenly">
+                <div id="rock_button" tag="rock" class=" buttons bg-purple-300 w-24 h-24 rounded-full shadow-lg text-center p-6 text-4xl"> 🪨 </div>
+                <div id="paper_button" tag="paper" class=" buttons bg-purple-300 w-24 h-24 rounded-full shadow-lg text-center p-6 text-4xl"> 🧻 </div>
+                <div id="scisors_button" tag="scisors" class=" buttons bg-purple-300 w-24 h-24 rounded-full shadow-lg text-center p-6 text-4xl"> ✂️ </div>    
+            </div>
+            <div class="flex justify-evenly p-10">
+                <div id="ai_choice" class=" w-24 h-24 rounded-full  bg-red-300 text-center p-6 text-4xl shadow-lg"> </div>
+                <div id="player_choice" class=" w-24 h-24 rounded-full  bg-green-300 text-center p-6 shadow-lg text-4xl"> </div>
+
+            </div>
+
+        </div>
+        <script src="script.js" async defer></script>
+    </body>
+</html>
